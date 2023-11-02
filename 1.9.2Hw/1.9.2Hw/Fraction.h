@@ -6,6 +6,8 @@ class Fraction
 private:
    int numerator_;
    int denominator_;
+   int numDenFun(Fraction obj, Fraction other, int &index1, int &index2);
+   void reduc(int &num_, int &denum_);
 
 public:
    Fraction(int numerator, int denominator);
@@ -23,6 +25,4 @@ public:
    void print();
 };
 
-std::ostream& operator<<(std::ostream &str, const Fraction &other){
-   return str << other.numerator_ << "/" << other.denominator_;
-}
+
